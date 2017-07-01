@@ -13,7 +13,7 @@ require("dotenv").config();
 
 passportSetup(passport);
 
-mongoose.connect('process.env.MONGODB_URI');
+mongoose.connect(process.env.MONGODB_URI);
 // mongoose.connect('mongodb://localhost/angular-auth');
 
 
