@@ -9,9 +9,13 @@ const mongoose     = require('mongoose');
 const session    = require('express-session');
 const passport   = require('passport');
 const passportSetup = require('./config/passport');
+require("dotenv").config();
+
 passportSetup(passport);
 
-mongoose.connect('mongodb://localhost/angular-auth');
+mongoose.connect('process.env.MONGODB_URI');
+// mongoose.connect('mongodb://localhost/angular-auth');
+
 
 const app = express();
 
